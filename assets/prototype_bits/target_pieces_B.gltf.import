@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bgm0o1hcxxfui"
-path="res://.godot/imported/target_pieces_B.gltf-7d30dc23b8e163d5ec7aced4562fdfac.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/prototype_bits/target_pieces_B.gltf"
-dest_files=["res://.godot/imported/target_pieces_B.gltf-7d30dc23b8e163d5ec7aced4562fdfac.scn"]
 
 [params]
 
@@ -44,8 +43,5 @@ _subresources={
 }
 }
 }
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
 gltf/naming_version=1
 gltf/embedded_image_handling=1
