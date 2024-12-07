@@ -32,8 +32,8 @@
 },
 "ignore_char_scale": true,
 "mirror": true,
-"offset": Vector2(-170, -20),
-"scale": 0.27,
+"offset": Vector2(10, -10),
+"scale": 0.15,
 "scene": "",
 "sound_mood": "Mood 1"
 },

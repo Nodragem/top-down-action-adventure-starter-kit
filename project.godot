@@ -68,6 +68,10 @@ window/size/always_on_top=true
 window/size/window_width_override=960
 window/size/window_height_override=540
 
+[editor]
+
+movie_writer/movie_file="C:/Users/geoff/Videos/tpaa-starterkit.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/beehave/plugin.cfg", "res://addons/dialogic/plugin.cfg")
