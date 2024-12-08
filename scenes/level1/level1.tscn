@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://b87aieg3uitnk"]
+[gd_scene load_steps=50 format=3 uid="uid://b87aieg3uitnk"]
 
 [ext_resource type="MeshLibrary" uid="uid://1r1ria7fpq17" path="res://assets/kits/meshlib_prototype_bits.tres" id="1_u13gm"]
 [ext_resource type="Script" path="res://scenes/level_manager.gd" id="1_xfajn"]
@@ -42,7 +42,6 @@
 [ext_resource type="PackedScene" uid="uid://bbsktoyjr6ylg" path="res://assets/objects/laboratory/dr_bed.glb" id="39_huhy3"]
 [ext_resource type="PackedScene" uid="uid://b2nlcgg1yuy7o" path="res://assets/objects/switches/door_switch.tscn" id="40_gvxam"]
 [ext_resource type="PackedScene" uid="uid://dfam82avfcqmy" path="res://scenes/level1/level1_training_area.tscn" id="41_81v2m"]
-[ext_resource type="PackedScene" uid="uid://dxmvilyw881dk" path="res://characters/enemies/bosses/boss_creature.tscn" id="43_11wy5"]
 
 [sub_resource type="Animation" id="Animation_e0tby"]
 resource_name = "Opening"
@@ -1195,9 +1194,6 @@ light_negative = true
 shadow_bias = 0.03
 shadow_blur = 0.0
 directional_shadow_mode = 0
-
-[node name="boss-creature-game-ready" parent="." instance=ExtResource("43_11wy5")]
-transform = Transform3D(-7.43094e-08, 0, 1.7, 0, 1.7, 0, -1.7, 0, -7.43094e-08, 100.134, 0.529999, 30.2063)
 
 [editable path="GridMapBuilding/Room1_StaticObjects/Locker_Decorated10"]
 [editable path="GridMapBuilding/Room1_StaticObjects/Locker_Decorated4"]

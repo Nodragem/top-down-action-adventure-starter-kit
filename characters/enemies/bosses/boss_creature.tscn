@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxmvilyw881dk"]
-
-[ext_resource type="PackedScene" uid="uid://clgsshfx1bp8i" path="res://characters/enemies/bosses/boss-creature-game-ready.fbx" id="1_dqd6l"]
-
-[node name="boss-creature-game-ready" instance=ExtResource("1_dqd6l")]
