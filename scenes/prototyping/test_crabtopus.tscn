@@ -26,7 +26,7 @@ script = ExtResource("1_kvvgk")
 visible = false
 
 [node name="PlayerEntity" parent="." instance=ExtResource("3_tnuaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -39.5516)
 inventory = ["toygun"]
 
 [node name="GridMap" type="GridMap" parent="."]
@@ -92,25 +92,25 @@ visible = false
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("14_wua4r")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.9358, 12, -19)
+[node name="crabtopus_boss" parent="." node_paths=PackedStringArray("looking_target") instance=ExtResource("15_aeik3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1.25865)
+looking_target = NodePath("../PlayerEntity")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="crabtopus_boss"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, -5.96788, 6, -0.293223)
 light_color = Color(1, 0.5, 0.5, 1)
 light_energy = 16.0
 omni_range = 24.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 20.0947, 1.14333, -58.2156)
+[node name="OmniLight3D2" type="OmniLight3D" parent="crabtopus_boss"]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 10.0473, 0.571665, -19.901)
 light_color = Color(0.44937, 0.361798, 0.948052, 1)
 light_energy = 16.0
 omni_range = 33.732
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-1, 7.0616e-08, -5.15375e-08, 0, 0.589521, 0.807753, 8.74228e-08, 0.807753, -0.589521, -11.9358, 12, -19)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="crabtopus_boss"]
+transform = Transform3D(-0.5, 3.5308e-08, -2.57688e-08, 0, 0.29476, 0.403877, 4.37114e-08, 0.403877, -0.29476, -5.96788, 6, -0.293223)
 light_color = Color(0.869293, 0.815387, 0.968418, 1)
 light_energy = 0.342
-
-[node name="crabtopus_boss" parent="." node_paths=PackedStringArray("looking_target") instance=ExtResource("15_aeik3")]
-transform = Transform3D(-2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 0, 0, -39)
-looking_target = NodePath("../PlayerEntity")
 
 [editable path="GridMap/Locker_Decorated4"]
