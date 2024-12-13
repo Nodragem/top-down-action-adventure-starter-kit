@@ -48,6 +48,9 @@ to_spawn = ExtResource("6_46hhq")
 time_between_waves = 12
 nb_spawn_by_wave = 2
 
+[node name="DoorSpawner_Opening" parent="NavigationRegion3D/GridMap/SwitchHub/DoorSpawner/DoorSpawner_Frame" index="0"]
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, -0.675713, 0.572169, 0.231301)
+
 [node name="EnemySpawner" parent="NavigationRegion3D/GridMap/SwitchHub/DoorSpawner" index="1"]
 transform = Transform3D(-1, -5.01073e-14, 8.74228e-08, 7.70801e-15, 1, -1.13687e-13, -8.74228e-08, 0, -1, 0, 2, -3)
 

@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_mhabt")
-controller_scheme = 3
+controller_scheme = 2

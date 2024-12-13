@@ -1,0 +1,141 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5e7rip3nkq40"]
+
+[ext_resource type="PackedScene" uid="uid://b7ktob8xljws5" path="res://characters/enemies/bosses/crabtopus_boss.gltf" id="1_hggp1"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/crabtopus_boss.gd" id="2_2yfkr"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/bone-follow-target.gd" id="2_n6xi7"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_k2thu"]
+filter_enabled = true
+filters = ["Skeleton3D/octocrab-boss:eye-blink", "Skeleton3D:DEF-b-eye-bottom.001_L", "Skeleton3D:DEF-b-eye-bottom.002_L", "Skeleton3D:DEF-b-eye-bottom.003_L", "Skeleton3D:DEF-b-eye-bottom.004_R", "Skeleton3D:DEF-b-eye-bottom.005_R", "Skeleton3D:DEF-b-eye-bottom.006_R", "Skeleton3D:DEF-b-eye-bottom.007_R", "Skeleton3D:DEF-b-eye-bottom_L", "Skeleton3D:DEF-b-eye.001_L", "Skeleton3D:DEF-b-eye.001_R", "Skeleton3D:DEF-b-eye.002_L", "Skeleton3D:DEF-b-eye.002_R", "Skeleton3D:DEF-b-eye.003_L", "Skeleton3D:DEF-b-eye.003_R", "Skeleton3D:DEF-b-eye.004_L", "Skeleton3D:DEF-b-eye.004_R", "Skeleton3D:DEF-b-mouth-bottom.001_L", "Skeleton3D:DEF-b-mouth-bottom.002_L", "Skeleton3D:DEF-b-mouth-bottom.003_L", "Skeleton3D:DEF-b-mouth-bottom.004_R", "Skeleton3D:DEF-b-mouth-bottom.005_R", "Skeleton3D:DEF-b-mouth-bottom.006_R", "Skeleton3D:DEF-b-mouth-bottom.007_R", "Skeleton3D:DEF-b-mouth-bottom_L", "Skeleton3D:DEF-b-mouth.001_L", "Skeleton3D:DEF-b-mouth.001_R", "Skeleton3D:DEF-b-mouth.002_L", "Skeleton3D:DEF-b-mouth.002_R", "Skeleton3D:DEF-b-mouth.003_L", "Skeleton3D:DEF-b-mouth.003_R", "Skeleton3D:DEF-b-mouth.004_L", "Skeleton3D:DEF-b-mouth.004_R"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_8cdcb"]
+input_0/name = "idling"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nhalw"]
+animation = &"blink-action"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i4wei"]
+animation = &"idle-action"
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y5j6i"]
+graph_offset = Vector2(-35.1085, -9.823)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_k2thu")
+nodes/OneShot/position = Vector2(540, 160)
+nodes/Transition/node = SubResource("AnimationNodeTransition_8cdcb")
+nodes/Transition/position = Vector2(300, 240)
+nodes/blink-anim/node = SubResource("AnimationNodeAnimation_nhalw")
+nodes/blink-anim/position = Vector2(300, 60)
+nodes/idle-anim/node = SubResource("AnimationNodeAnimation_i4wei")
+nodes/idle-anim/position = Vector2(80, 260)
+nodes/output/position = Vector2(760, 200)
+node_connections = [&"OneShot", 0, &"Transition", &"OneShot", 1, &"blink-anim", &"Transition", 0, &"idle-anim", &"output", 0, &"OneShot"]
+
+[node name="crabtopus_boss" instance=ExtResource("1_hggp1")]
+script = ExtResource("2_2yfkr")
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/1/rotation = Quaternion(0.263224, -0.39258, 0.872758, 0.122013)
+bones/3/rotation = Quaternion(-0.263224, -0.39258, 0.872758, -0.122013)
+bones/4/rotation = Quaternion(0.53448, -0.5246, 0.641608, 0.165727)
+bones/5/rotation = Quaternion(0.564408, -0.458931, 0.668495, 0.154728)
+bones/6/rotation = Quaternion(-0.53448, -0.5246, 0.641608, -0.165727)
+bones/7/rotation = Quaternion(-0.564408, -0.458931, 0.668495, -0.154728)
+bones/8/rotation = Quaternion(-4.83565e-08, 3.89529e-08, 0.707028, 0.707186)
+bones/10/rotation = Quaternion(-5.56905e-08, 4.62917e-08, 0.707006, 0.707208)
+bones/11/rotation = Quaternion(-3.79843e-08, 2.85805e-08, 0.707006, 0.707208)
+bones/12/rotation = Quaternion(-5.56978e-08, 1.10473e-08, 0.707006, 0.707208)
+bones/13/rotation = Quaternion(-3.79843e-08, 2.85805e-08, 0.707006, 0.707208)
+bones/14/rotation = Quaternion(-3.80667e-08, 2.86629e-08, 0.707006, 0.707208)
+bones/15/rotation = Quaternion(-3.80667e-08, 2.86629e-08, 0.707006, 0.707208)
+bones/16/rotation = Quaternion(-3.80667e-08, 2.86629e-08, 0.707006, 0.707208)
+bones/17/rotation = Quaternion(-6.45009e-08, 3.74788e-08, 0.707006, 0.707208)
+bones/18/rotation = Quaternion(-4.83565e-08, -3.89529e-08, -0.707028, 0.707186)
+bones/20/rotation = Quaternion(-5.56905e-08, -4.62917e-08, -0.707006, 0.707208)
+bones/21/rotation = Quaternion(-3.79843e-08, -2.85805e-08, -0.707006, 0.707208)
+bones/22/rotation = Quaternion(-5.56978e-08, -1.10473e-08, -0.707006, 0.707208)
+bones/23/rotation = Quaternion(-3.79843e-08, -2.85805e-08, -0.707006, 0.707208)
+bones/24/rotation = Quaternion(-3.80667e-08, -2.86629e-08, -0.707006, 0.707208)
+bones/25/rotation = Quaternion(-3.80667e-08, -2.86629e-08, -0.707006, 0.707208)
+bones/26/rotation = Quaternion(-3.80667e-08, -2.86629e-08, -0.707006, 0.707208)
+bones/28/rotation = Quaternion(0.307414, 0.307346, 0.636699, 0.636907)
+bones/29/rotation = Quaternion(0.307418, 0.307342, 0.636687, 0.636918)
+bones/31/rotation = Quaternion(0.307424, 0.307336, 0.636669, 0.636936)
+bones/32/rotation = Quaternion(0.307424, 0.307336, 0.636669, 0.636936)
+bones/33/rotation = Quaternion(0.307424, 0.307336, 0.636669, 0.636936)
+bones/37/rotation = Quaternion(0.307424, 0.307336, 0.636669, 0.636936)
+bones/38/rotation = Quaternion(0.307414, -0.307346, -0.636699, 0.636907)
+bones/39/rotation = Quaternion(0.307418, -0.307342, -0.636687, 0.636918)
+bones/41/rotation = Quaternion(0.307424, -0.307336, -0.636669, 0.636936)
+bones/42/rotation = Quaternion(0.307424, -0.307336, -0.636669, 0.636936)
+bones/43/rotation = Quaternion(0.307424, -0.307336, -0.636669, 0.636936)
+bones/47/rotation = Quaternion(0.307424, -0.307336, -0.636669, 0.636936)
+bones/48/rotation = Quaternion(0.251055, 0.0910077, 0.953304, -0.141072)
+bones/49/scale = Vector3(1, 1, 1)
+bones/50/rotation = Quaternion(-0.251055, 0.0910077, 0.953304, 0.141072)
+bones/51/rotation = Quaternion(-0.235323, 0.180278, 0.942509, 0.15427)
+bones/51/scale = Vector3(1, 1, 1)
+bones/52/rotation = Quaternion(-0.30259, -0.116571, 0.791329, 0.518313)
+bones/53/rotation = Quaternion(-0.106955, -0.177023, 0.785657, 0.583067)
+bones/54/rotation = Quaternion(-0.113631, 0.00713676, 0.733783, 0.669776)
+bones/55/rotation = Quaternion(-0.30259, 0.116571, -0.791329, 0.518313)
+bones/56/rotation = Quaternion(-0.106955, 0.177023, -0.785657, 0.583067)
+bones/57/rotation = Quaternion(-0.113631, -0.00713676, -0.733783, 0.669776)
+bones/58/rotation = Quaternion(-0.317218, 0.257312, -0.698352, 0.587765)
+bones/60/rotation = Quaternion(-0.119362, -0.0727251, -0.78212, 0.60725)
+bones/61/rotation = Quaternion(-0.317218, -0.257312, 0.698352, 0.587765)
+bones/63/rotation = Quaternion(-0.119362, 0.0727251, 0.78212, 0.60725)
+bones/65/rotation = Quaternion(-0.239869, -0.0194478, 0.0881565, 0.966599)
+bones/66/rotation = Quaternion(-0.239869, 0.0194478, -0.0881565, 0.966599)
+bones/68/rotation = Quaternion(0.243206, -0.512911, 0.807868, 0.158501)
+bones/69/rotation = Quaternion(-0.243206, -0.512911, 0.807868, -0.158501)
+bones/70/rotation = Quaternion(0.537141, -0.537013, 0.620294, 0.195786)
+bones/71/rotation = Quaternion(-0.537141, -0.537013, 0.620294, -0.195786)
+bones/74/rotation = Quaternion(0.307436, 0.307324, 0.636631, 0.636974)
+bones/75/rotation = Quaternion(0.307436, -0.307324, -0.636631, 0.636974)
+bones/76/rotation = Quaternion(-6.65626e-09, -2.6054e-15, 3.46849e-23, 1)
+bones/77/rotation = Quaternion(0.275628, -0.624702, 0.725822, 0.0834215)
+bones/78/rotation = Quaternion(-0.275628, -0.624702, 0.725822, -0.0834215)
+bones/79/rotation = Quaternion(-0.8126, 0.0983899, 0.270107, 0.506994)
+bones/80/rotation = Quaternion(-0.8126, -0.0983899, -0.270107, 0.506994)
+
+[node name="LookAtTarget" type="SkeletonModifier3D" parent="Skeleton3D" index="0" node_paths=PackedStringArray("target")]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+rotation_edit_mode = 0
+rotation_order = 2
+top_level = false
+visible = true
+visibility_parent = NodePath("")
+active = true
+influence = 1.0
+script = ExtResource("2_n6xi7")
+target = NodePath("../../Marker3D")
+bone = "DEF-b-eye"
+metadata/_edit_lock_ = true
+
+[node name="octocrab-boss" parent="Skeleton3D" index="1"]
+blend_shapes/eye-blink = 0.00250882
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_y5j6i")
+anim_player = NodePath("../AnimationPlayer")
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
+parameters/Transition/current_state = "idling"
+parameters/Transition/transition_request = ""
+parameters/Transition/current_index = 0
+
+[node name="Marker3D" type="Marker3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35994, 2.36813, -7.97787)

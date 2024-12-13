@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://qrjiwwhfv2ga"]
+[gd_scene load_steps=17 format=3 uid="uid://qrjiwwhfv2ga"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_kvvgk"]
+[ext_resource type="PackedScene" uid="uid://bsvdg3ojnd0oj" path="res://ui/ControllerMenu.tscn" id="2_j3vqk"]
 [ext_resource type="PackedScene" uid="uid://bd5lrudlpxbay" path="res://ui/GameOverMenu.tscn" id="2_shjc6"]
 [ext_resource type="PackedScene" uid="uid://jga6pbb5xpug" path="res://characters/player/PlayerEntity.tscn" id="3_tnuaq"]
 [ext_resource type="MeshLibrary" uid="uid://1r1ria7fpq17" path="res://assets/kits/meshlib_prototype_bits.tres" id="4_feg2f"]
-[ext_resource type="Environment" uid="uid://dtrxire26wyng" path="res://scenes/level1/level1_env.tres" id="5_l7vqa"]
 [ext_resource type="PackedScene" uid="uid://dneg7v0yca3cx" path="res://assets/prototype_bits/Locker_Decorated.gltf" id="7_rtbbl"]
 [ext_resource type="PackedScene" uid="uid://ppgku2ydp6y4" path="res://assets/prototype_bits/Pallet_Small_Decorated_B.gltf" id="8_4uqpq"]
 [ext_resource type="PackedScene" uid="uid://dotpnlcy27ggq" path="res://assets/prototype_bits/Pallet_Small_Decorated_A.gltf" id="9_wmggd"]
@@ -13,15 +13,21 @@
 [ext_resource type="PackedScene" uid="uid://nmp0ctc70y5b" path="res://assets/prototype_bits/Workbench.gltf" id="12_xqy8m"]
 [ext_resource type="PackedScene" uid="uid://digne67jlks1d" path="res://assets/prototype_bits/Workbench_Decorated.gltf" id="13_7q4lj"]
 [ext_resource type="PackedScene" uid="uid://d4ewiiealjeoy" path="res://assets/prototype_bits/Dummy_Base.gltf" id="14_t5pn0"]
+[ext_resource type="Environment" uid="uid://dveubft3xou1v" path="res://scenes/prototyping/boss-fight_env.tres" id="14_wua4r"]
+[ext_resource type="PackedScene" uid="uid://c5e7rip3nkq40" path="res://characters/enemies/bosses/crabtopus_boss.tscn" id="15_aeik3"]
 [ext_resource type="PackedScene" uid="uid://cvasin4b5w0ll" path="res://assets/prototype_bits/Door_B.gltf" id="15_x5wki"]
 
-[node name="TestAI" type="Node3D"]
+[node name="TestCrabtopus" type="Node3D"]
 script = ExtResource("1_kvvgk")
 
+[node name="ControllerMenu" parent="." instance=ExtResource("2_j3vqk")]
+
 [node name="GameOverMenu" parent="." instance=ExtResource("2_shjc6")]
+visible = false
 
 [node name="PlayerEntity" parent="." instance=ExtResource("3_tnuaq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.515, 0.544966, 6.06295)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+inventory = ["toygun"]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("4_feg2f")
@@ -84,31 +90,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42534, 0.500002, -14.29)
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("5_l7vqa")
+environment = ExtResource("14_wua4r")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -11.9358, 12, -19)
+light_color = Color(1, 0.5, 0.5, 1)
+light_energy = 16.0
+omni_range = 24.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 20.0947, 1.14333, -58.2156)
+light_color = Color(0.44937, 0.361798, 0.948052, 1)
+light_energy = 16.0
+omni_range = 33.732
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.138435, 0.820941, -0.553978, -0.35771, 0.56305, 0.744996, 0.923515, 0.09503, 0.371605, 0, 26.3786, -5.7794)
-layers = 2
-light_color = Color(0.992157, 0.917647, 0.698039, 1)
-light_angular_distance = 3.0
-shadow_enabled = true
-shadow_bias = 0.03
-directional_shadow_mode = 0
-directional_shadow_split_2 = 0.343
-directional_shadow_split_3 = 0.566
-directional_shadow_blend_splits = true
+transform = Transform3D(-1, 7.0616e-08, -5.15375e-08, 0, 0.589521, 0.807753, 8.74228e-08, 0.807753, -0.589521, -11.9358, 12, -19)
+light_color = Color(0.869293, 0.815387, 0.968418, 1)
+light_energy = 0.342
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 8.74228e-08, 4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, 0, 13.9098, -17.1364)
-layers = 2
-light_color = Color(0.303129, 0.18483, 0.0558749, 1)
-light_energy = 1.239
-light_volumetric_fog_energy = 0.0
-light_negative = true
-shadow_bias = 0.03
-shadow_blur = 0.0
-directional_shadow_mode = 0
-
-[connection signal="is_dead" from="PlayerEntity" to="." method="on_player_death"]
+[node name="crabtopus_boss" parent="." node_paths=PackedStringArray("looking_target") instance=ExtResource("15_aeik3")]
+transform = Transform3D(-2, 0, -3.01992e-07, 0, 2, 0, 3.01992e-07, 0, -2, 0, 0, -39)
+looking_target = NodePath("../PlayerEntity")
 
 [editable path="GridMap/Locker_Decorated4"]

@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d4ewiiealjeoy" path="res://assets/prototype_bits/Dummy_Base.gltf" id="13_8a48e"]
 [ext_resource type="PackedScene" uid="uid://dneg7v0yca3cx" path="res://assets/prototype_bits/Locker_Decorated.gltf" id="14_tuq1f"]
 [ext_resource type="PackedScene" uid="uid://cykscxty5uq57" path="res://assets/prototype_bits/Locker.gltf" id="15_y8qy3"]
-[ext_resource type="Texture2D" uid="uid://dbrn6ardtv1cp" path="res://assets/prototype_bits/prototypebits_texture.png" id="16_j308v"]
+[ext_resource type="Texture2D" uid="uid://duworbvto46xo" path="res://assets/prototype_bits/prototypebits_texture.png" id="16_j308v"]
 [ext_resource type="PackedScene" uid="uid://c2k5k7ualsfti" path="res://assets/prototype_bits/Can_B.gltf" id="17_0aj04"]
 [ext_resource type="PackedScene" uid="uid://buq7arttbssjc" path="res://assets/prototype_bits/target_stand_A.gltf" id="18_6tvoi"]
 [ext_resource type="PackedScene" uid="uid://bduqqs8bwptfe" path="res://assets/prototype_bits/target_wall_large_A.gltf" id="19_hvl7a"]
@@ -35,7 +35,6 @@
 [ext_resource type="PackedScene" uid="uid://cyg3765gfh25q" path="res://assets/prototype_bits/target_stand_A_Decorated.gltf" id="33_04ea0"]
 [ext_resource type="PackedScene" uid="uid://b4pnyn61mwgsh" path="res://assets/prototype_bits/target.gltf" id="34_6xqhy"]
 [ext_resource type="Environment" uid="uid://13w4n7joxo58" path="res://scenes/prototyping/level_canyon_env.tres" id="35_64yo0"]
-
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8opj"]
 resource_name = "prototype_texture.034"
