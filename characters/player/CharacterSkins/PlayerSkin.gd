@@ -1,7 +1,6 @@
 class_name PlayerSkin
 extends Node3D
 
-@onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var anim_tree: AnimationTree = $AnimationTree
 @onready var shoot_anchor: Marker3D = %ShootAnchor
 @onready var muzzle_vfx: MeshInstance3D = %MuzzleVFX

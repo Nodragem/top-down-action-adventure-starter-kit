@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 @onready var camera:Camera3D = $CameraPivot/ThirdPersonCamera
 @onready var camera_pivot:Node3D = $CameraPivot
-@onready var model := $IcySkin
+@onready var model:PlayerSkin = $IcySkin
 @onready var health_manager := $HealthManager
 @onready var anim_tree := $IcySkin/AnimationTree
 @onready var shoot_anchor := $IcySkin/%ShootAnchor

@@ -3,8 +3,8 @@ class_name State
 extends Node
 
 
-@onready var _state_machine: = _get_state_machine(self) 
-var _parent: State = null
+@onready var _state_machine:StateMachine = _get_state_machine(self) 
+var _parent:State = null
 
 signal enter_state
 signal exit_state

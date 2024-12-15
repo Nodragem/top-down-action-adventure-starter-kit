@@ -1,39 +1,78 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5e7rip3nkq40"]
+[gd_scene load_steps=22 format=3 uid="uid://c5e7rip3nkq40"]
 
 [ext_resource type="PackedScene" uid="uid://b7ktob8xljws5" path="res://characters/enemies/bosses/crabtopus_boss.gltf" id="1_hggp1"]
-[ext_resource type="Script" path="res://characters/enemies/bosses/crabtopus_boss.gd" id="2_2yfkr"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/crabtopus_exports.gd" id="2_2yfkr"]
 [ext_resource type="Script" path="res://characters/enemies/bosses/bone-follow-target.gd" id="2_n6xi7"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/crabtopus_animator.gd" id="4_m1ihd"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/crabtopus_controller.gd" id="5_soqsb"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/states/rage_mode.gd" id="6_yvklk"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/states/fight_mode.gd" id="7_n0s6j"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/states/idling.gd" id="8_i0sjh"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/states/short_attack.gd" id="9_tucev"]
+[ext_resource type="Script" path="res://characters/enemies/bosses/states/shielding.gd" id="10_nyx2y"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nhalw"]
+animation = &"blink-action"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q0pkv"]
+animation = &"defense-action"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_rr2dr"]
+filter_enabled = true
+filters = ["Skeleton3D/octocrab-boss:eye-blink", "Skeleton3D:DEF-b-claw-1_L", "Skeleton3D:DEF-b-claw-1_R", "Skeleton3D:DEF-b-claw-2_L", "Skeleton3D:DEF-b-claw-2_L.001", "Skeleton3D:DEF-b-claw-2_R", "Skeleton3D:DEF-b-claw-2_R.001", "Skeleton3D:DEF-b-eye-bottom.001_L", "Skeleton3D:DEF-b-eye-bottom.002_L", "Skeleton3D:DEF-b-eye-bottom.003_L", "Skeleton3D:DEF-b-eye-bottom.004_R", "Skeleton3D:DEF-b-eye-bottom.005_R", "Skeleton3D:DEF-b-eye-bottom.006_R", "Skeleton3D:DEF-b-eye-bottom.007_R", "Skeleton3D:DEF-b-eye-bottom_L", "Skeleton3D:DEF-b-eye.001_L", "Skeleton3D:DEF-b-eye.001_R", "Skeleton3D:DEF-b-eye.002_L", "Skeleton3D:DEF-b-eye.002_R", "Skeleton3D:DEF-b-eye.003_L", "Skeleton3D:DEF-b-eye.003_R", "Skeleton3D:DEF-b-eye.004_L", "Skeleton3D:DEF-b-eye.004_R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i4wei"]
+animation = &"idle-action"
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_k2thu"]
 filter_enabled = true
 filters = ["Skeleton3D/octocrab-boss:eye-blink", "Skeleton3D:DEF-b-eye-bottom.001_L", "Skeleton3D:DEF-b-eye-bottom.002_L", "Skeleton3D:DEF-b-eye-bottom.003_L", "Skeleton3D:DEF-b-eye-bottom.004_R", "Skeleton3D:DEF-b-eye-bottom.005_R", "Skeleton3D:DEF-b-eye-bottom.006_R", "Skeleton3D:DEF-b-eye-bottom.007_R", "Skeleton3D:DEF-b-eye-bottom_L", "Skeleton3D:DEF-b-eye.001_L", "Skeleton3D:DEF-b-eye.001_R", "Skeleton3D:DEF-b-eye.002_L", "Skeleton3D:DEF-b-eye.002_R", "Skeleton3D:DEF-b-eye.003_L", "Skeleton3D:DEF-b-eye.003_R", "Skeleton3D:DEF-b-eye.004_L", "Skeleton3D:DEF-b-eye.004_R", "Skeleton3D:DEF-b-mouth-bottom.001_L", "Skeleton3D:DEF-b-mouth-bottom.002_L", "Skeleton3D:DEF-b-mouth-bottom.003_L", "Skeleton3D:DEF-b-mouth-bottom.004_R", "Skeleton3D:DEF-b-mouth-bottom.005_R", "Skeleton3D:DEF-b-mouth-bottom.006_R", "Skeleton3D:DEF-b-mouth-bottom.007_R", "Skeleton3D:DEF-b-mouth-bottom_L", "Skeleton3D:DEF-b-mouth.001_L", "Skeleton3D:DEF-b-mouth.001_R", "Skeleton3D:DEF-b-mouth.002_L", "Skeleton3D:DEF-b-mouth.002_R", "Skeleton3D:DEF-b-mouth.003_L", "Skeleton3D:DEF-b-mouth.003_R", "Skeleton3D:DEF-b-mouth.004_L", "Skeleton3D:DEF-b-mouth.004_R"]
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_0hxuu"]
+
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_8cdcb"]
-input_0/name = "idling"
+input_0/name = "Idling"
 input_0/auto_advance = false
 input_0/break_loop_at_end = false
 input_0/reset = true
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nhalw"]
-animation = &"blink-action"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i4wei"]
-animation = &"idle-action"
+input_1/name = "Dead"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "Raging"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y5j6i"]
-graph_offset = Vector2(-35.1085, -9.823)
-nodes/OneShot/node = SubResource("AnimationNodeOneShot_k2thu")
-nodes/OneShot/position = Vector2(540, 160)
-nodes/Transition/node = SubResource("AnimationNodeTransition_8cdcb")
-nodes/Transition/position = Vector2(300, 240)
+graph_offset = Vector2(-204.418, 19.2734)
 nodes/blink-anim/node = SubResource("AnimationNodeAnimation_nhalw")
-nodes/blink-anim/position = Vector2(300, 60)
+nodes/blink-anim/position = Vector2(300, 360)
+nodes/defense-anim/node = SubResource("AnimationNodeAnimation_q0pkv")
+nodes/defense-anim/position = Vector2(280, 540)
+nodes/eye_priority/node = SubResource("AnimationNodeBlend2_rr2dr")
+nodes/eye_priority/position = Vector2(800, 180)
 nodes/idle-anim/node = SubResource("AnimationNodeAnimation_i4wei")
-nodes/idle-anim/position = Vector2(80, 260)
-nodes/output/position = Vector2(760, 200)
-node_connections = [&"OneShot", 0, &"Transition", &"OneShot", 1, &"blink-anim", &"Transition", 0, &"idle-anim", &"output", 0, &"OneShot"]
+nodes/idle-anim/position = Vector2(80, 0)
+nodes/on_blink/node = SubResource("AnimationNodeOneShot_k2thu")
+nodes/on_blink/position = Vector2(540, 120)
+nodes/output/position = Vector2(1020, 200)
+nodes/play_shielding/node = SubResource("AnimationNodeTimeScale_0hxuu")
+nodes/play_shielding/position = Vector2(560, 460)
+nodes/state/node = SubResource("AnimationNodeTransition_8cdcb")
+nodes/state/position = Vector2(320, 60)
+node_connections = [&"eye_priority", 0, &"on_blink", &"eye_priority", 1, &"play_shielding", &"on_blink", 0, &"state", &"on_blink", 1, &"blink-anim", &"output", 0, &"eye_priority", &"play_shielding", 0, &"defense-anim", &"state", 0, &"idle-anim"]
 
-[node name="crabtopus_boss" instance=ExtResource("1_hggp1")]
+[sub_resource type="SphereShape3D" id="SphereShape3D_t38xe"]
+radius = 1.5013
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o134k"]
+size = Vector3(25.293, 4.59912, 7.99231)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_53i4u"]
+radius = 2.82974
+
+[node name="CrabtopusBoss" instance=ExtResource("1_hggp1")]
 script = ExtResource("2_2yfkr")
 
 [node name="Skeleton3D" parent="." index="0"]
@@ -125,17 +164,72 @@ bone = "DEF-b-eye"
 metadata/_edit_lock_ = true
 
 [node name="octocrab-boss" parent="Skeleton3D" index="1"]
-blend_shapes/eye-blink = 0.00250882
+blend_shapes/eye-blink = 0.5
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
 tree_root = SubResource("AnimationNodeBlendTree_y5j6i")
 anim_player = NodePath("../AnimationPlayer")
-parameters/OneShot/active = false
-parameters/OneShot/internal_active = false
-parameters/OneShot/request = 0
-parameters/Transition/current_state = "idling"
-parameters/Transition/transition_request = ""
-parameters/Transition/current_index = 0
+parameters/eye_priority/blend_amount = 1.0
+parameters/on_blink/active = false
+parameters/on_blink/internal_active = false
+parameters/on_blink/request = 0
+parameters/play_shielding/scale = 1.0
+parameters/state/current_state = "Idling"
+parameters/state/transition_request = ""
+parameters/state/current_index = 0
+script = ExtResource("4_m1ihd")
 
 [node name="Marker3D" type="Marker3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35994, 2.36813, -7.97787)
+
+[node name="StateMachine" type="Node" parent="." index="4"]
+script = ExtResource("5_soqsb")
+initial_state = NodePath("FightMode/Idling")
+
+[node name="RageMode" type="Node" parent="StateMachine" index="0"]
+script = ExtResource("6_yvklk")
+
+[node name="FightMode" type="Node" parent="StateMachine" index="1"]
+script = ExtResource("7_n0s6j")
+
+[node name="Idling" type="Node" parent="StateMachine/FightMode" index="0"]
+script = ExtResource("8_i0sjh")
+
+[node name="BlinkTimer" type="Timer" parent="StateMachine/FightMode/Idling" index="0"]
+wait_time = 5.0
+one_shot = true
+
+[node name="ShortAttack" type="Node" parent="StateMachine/FightMode" index="1"]
+script = ExtResource("9_tucev")
+
+[node name="Shielding" type="Node" parent="StateMachine/FightMode" index="2"]
+script = ExtResource("10_nyx2y")
+
+[node name="DamageArea" type="Area3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.73357)
+collision_layer = 16
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DamageArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.96833, 1.04936)
+shape = SubResource("SphereShape3D_t38xe")
+
+[node name="CollisionArea" type="StaticBody3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.73357)
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177643, 3.76789, 3.34384)
+shape = SubResource("BoxShape3D_o134k")
+
+[node name="ShieldArea" type="Area3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.73357)
+collision_layer = 16
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShieldArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.96833, 1.04936)
+shape = SubResource("SphereShape3D_53i4u")
