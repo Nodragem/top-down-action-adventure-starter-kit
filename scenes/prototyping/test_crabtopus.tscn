@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://qrjiwwhfv2ga"]
+[gd_scene load_steps=18 format=3 uid="uid://qrjiwwhfv2ga"]
 
-[ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_kvvgk"]
+[ext_resource type="Script" uid="uid://b1xrinwfnjecq" path="res://scenes/game_manager.gd" id="1_kvvgk"]
 [ext_resource type="PackedScene" uid="uid://bsvdg3ojnd0oj" path="res://ui/ControllerMenu.tscn" id="2_j3vqk"]
 [ext_resource type="PackedScene" uid="uid://bd5lrudlpxbay" path="res://ui/GameOverMenu.tscn" id="2_shjc6"]
 [ext_resource type="PackedScene" uid="uid://jga6pbb5xpug" path="res://characters/player/PlayerEntity.tscn" id="3_tnuaq"]
@@ -16,6 +16,7 @@
 [ext_resource type="Environment" uid="uid://dveubft3xou1v" path="res://scenes/prototyping/boss-fight_env.tres" id="14_wua4r"]
 [ext_resource type="PackedScene" uid="uid://c5e7rip3nkq40" path="res://characters/enemies/bosses/crabtopus_boss.tscn" id="15_aeik3"]
 [ext_resource type="PackedScene" uid="uid://cvasin4b5w0ll" path="res://assets/prototype_bits/Door_B.gltf" id="15_x5wki"]
+[ext_resource type="PackedScene" uid="uid://cykscxty5uq57" path="res://assets/prototype_bits/Locker.gltf" id="17_efgx7"]
 
 [node name="TestCrabtopus" type="Node3D"]
 script = ExtResource("1_kvvgk")
@@ -29,88 +30,124 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -39.5516)
 inventory = ["toygun"]
 
+[node name="crabtopus_boss" parent="." node_paths=PackedStringArray("looking_target") instance=ExtResource("15_aeik3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1.25865)
+visible = false
+looking_target = NodePath("../PlayerEntity")
+
 [node name="GridMap" type="GridMap" parent="."]
+visible = false
 mesh_library = ExtResource("4_feg2f")
 cell_size = Vector3(4, 4, 4)
 cell_center_y = false
 data = {
-"cells": PackedInt32Array(65535, 0, 41, 65535, 1, 41, 0, 2, 47, 1, 2, 41, 1, 1, 41, 2, 1, 41, 2, 0, 41, 2, 65535, 41, 2, 65534, 41, 1, 65534, 41, 0, 65534, 41, 0, 65535, 39, 0, 0, 41, 0, 1, 41, 1, 0, 41, 1, 65535, 41, 65535, 65535, 41, 65535, 65534, 41, 65534, 65534, 41, 65534, 65533, 41, 65534, 65532, 41, 65533, 65533, 41, 65533, 65534, 41, 65533, 65535, 41, 65533, 0, 41, 65533, 1, 41, 65534, 1, 41, 65534, 2, 41, 65535, 2, 41, 65534, 0, 41, 65532, 65533, 41, 65532, 65534, 41, 65534, 65535, 41, 65535, 65533, 41, 0, 65533, 41, 1, 65533, 41, 2, 65533, 41, 3, 65533, 41, 65532, 65532, 41, 65533, 65532, 41, 65535, 65532, 41, 0, 65532, 47, 1, 65532, 41, 2, 65532, 41, 3, 65532, 41, 3, 65534, 41, 3, 65535, 47, 3, 0, 41, 3, 1, 41, 3, 2, 41, 2, 2, 41, 65533, 2, 41, 65532, 2, 41, 65532, 1, 41, 65532, 0, 41, 65532, 65535, 47, 65531, 1, 34, 65531, 2, 33, 65531, 3, 34, 65532, 3, 33, 65533, 3, 34, 65534, 3, 33, 65535, 3, 34, 0, 3, 54, 1, 3, 34, 2, 3, 33, 3, 3, 34, 4, 3, 34, 4, 2, 34, 4, 1, 34, 4, 65535, 54, 4, 65534, 33, 4, 0, 33, 4, 65533, 34, 65531, 65535, 54, 65531, 65533, 33, 65531, 65532, 34, 65531, 65534, 34, 65531, 0, 34, 4, 65532, 33, 65540, 65531, 57, 131067, 65531, 57, 131067, 3, 57, 65540, 3, 57, 65532, 65525, 41, 65532, 65526, 41, 65532, 65527, 41, 65532, 65528, 47, 65532, 65529, 41, 65532, 65530, 41, 65532, 65531, 41, 65533, 65525, 41, 65533, 65526, 41, 65533, 65527, 41, 65533, 65528, 41, 65533, 65529, 41, 65533, 65530, 41, 65533, 65531, 41, 65534, 65525, 41, 65534, 65526, 41, 65534, 65527, 41, 65534, 65528, 41, 65534, 65529, 41, 65534, 65530, 41, 65534, 65531, 41, 65535, 65525, 41, 65535, 65526, 41, 65535, 65527, 41, 65535, 65528, 41, 65535, 65529, 41, 65535, 65530, 41, 65535, 65531, 41, 0, 65525, 47, 0, 65526, 41, 0, 65527, 41, 0, 65528, 39, 0, 65529, 41, 0, 65530, 41, 0, 65531, 47, 1, 65525, 41, 1, 65526, 41, 1, 65527, 41, 1, 65528, 41, 1, 65529, 41, 1, 65530, 41, 1, 65531, 41, 2, 65525, 41, 2, 65526, 41, 2, 65527, 41, 2, 65528, 41, 2, 65529, 41, 2, 65530, 41, 2, 65531, 41, 3, 65525, 41, 3, 65526, 41, 3, 65527, 41, 3, 65528, 47, 3, 65529, 41, 3, 65530, 41, 3, 65531, 41, 65531, 65524, 34, 65531, 65525, 33, 65531, 65526, 34, 65531, 65527, 54, 65531, 65528, 34, 65531, 65529, 34, 65531, 65530, 33, 65531, 65531, 34, 4, 65524, 34, 4, 65525, 34, 4, 65526, 33, 4, 65527, 54, 4, 65528, 33, 4, 65529, 34, 4, 65530, 34, 4, 65531, 34, 65532, 65524, 33, 65533, 65524, 34, 65534, 65524, 33, 65535, 65524, 34, 0, 65524, 54, 1, 65524, 34, 2, 65524, 33, 3, 65524, 34, 65540, 65524, 57, 131067, 65524, 57)
+"cells": PackedInt32Array(65535, 0, 41, 65535, 1, 41, 0, 2, 47, 1, 2, 41, 1, 1, 41, 2, 1, 41, 2, 0, 41, 2, 65535, 41, 2, 65534, 41, 1, 65534, 41, 0, 65534, 41, 0, 65535, 39, 0, 0, 41, 0, 1, 41, 1, 0, 41, 1, 65535, 41, 65535, 65535, 41, 65535, 65534, 41, 65534, 65534, 41, 65534, 65533, 41, 65534, 65532, 41, 65533, 65533, 41, 65533, 65534, 41, 65533, 65535, 41, 65533, 0, 41, 65533, 1, 41, 65534, 1, 41, 65534, 2, 41, 65535, 2, 41, 65534, 0, 41, 65532, 65533, 41, 65532, 65534, 41, 65534, 65535, 41, 65535, 65533, 41, 0, 65533, 41, 1, 65533, 41, 2, 65533, 41, 3, 65533, 41, 65532, 65532, 41, 65533, 65532, 41, 65535, 65532, 41, 0, 65532, 47, 1, 65532, 41, 2, 65532, 41, 3, 65532, 41, 3, 65534, 41, 3, 65535, 47, 3, 0, 41, 3, 1, 41, 3, 2, 41, 2, 2, 41, 65533, 2, 41, 65532, 2, 41, 65532, 1, 41, 65532, 0, 41, 65532, 65535, 47, 65531, 1, 34, 65531, 2, 33, 65531, 3, 34, 65532, 3, 34, 65533, 3, 34, 65534, 3, 34, 65535, 3, 34, 0, 3, 54, 1, 3, 34, 2, 3, 33, 3, 3, 34, 4, 3, 34, 4, 2, 34, 4, 1, 34, 4, 65535, 54, 4, 65534, 33, 4, 0, 33, 4, 65533, 34, 65531, 65535, 54, 65531, 65533, 33, 65531, 65532, 34, 65531, 65534, 34, 65531, 0, 34, 4, 65532, 33, 65540, 65531, 57, 131067, 65531, 57, 131067, 3, 57, 65540, 3, 57, 65532, 65525, 41, 65532, 65526, 41, 65532, 65527, 41, 65532, 65528, 47, 65532, 65529, 41, 65532, 65530, 41, 65532, 65531, 41, 65533, 65525, 41, 65533, 65526, 41, 65533, 65527, 41, 65533, 65528, 41, 65533, 65529, 41, 65533, 65530, 41, 65533, 65531, 41, 65534, 65525, 41, 65534, 65526, 41, 65534, 65527, 41, 65534, 65528, 41, 65534, 65529, 41, 65534, 65530, 41, 65534, 65531, 41, 65535, 65525, 41, 65535, 65526, 41, 65535, 65527, 41, 65535, 65528, 41, 65535, 65529, 41, 65535, 65530, 41, 65535, 65531, 41, 0, 65525, 47, 0, 65526, 41, 0, 65527, 41, 0, 65528, 39, 0, 65529, 41, 0, 65530, 41, 0, 65531, 47, 1, 65525, 41, 1, 65526, 41, 1, 65527, 41, 1, 65528, 41, 1, 65529, 41, 1, 65530, 41, 1, 65531, 41, 2, 65525, 41, 2, 65526, 41, 2, 65527, 41, 2, 65528, 41, 2, 65529, 41, 2, 65530, 41, 2, 65531, 41, 3, 65525, 41, 3, 65526, 41, 3, 65527, 41, 3, 65528, 47, 3, 65529, 41, 3, 65530, 41, 3, 65531, 41, 65531, 65524, 34, 65531, 65525, 33, 65531, 65526, 34, 65531, 65527, 54, 65531, 65528, 34, 65531, 65529, 34, 65531, 65530, 33, 65531, 65531, 34, 4, 65524, 34, 4, 65525, 34, 4, 65526, 33, 4, 65527, 54, 4, 65528, 33, 4, 65529, 34, 4, 65530, 34, 4, 65531, 34, 65532, 65524, 33, 65533, 65524, 34, 65534, 65524, 33, 65535, 65524, 34, 0, 65524, 54, 1, 65524, 34, 2, 65524, 33, 3, 65524, 34, 65540, 65524, 57, 131067, 65524, 57)
 }
-metadata/_editor_floor_ = Vector3(0, 1, 0)
-
-[node name="Locker_Decorated2" parent="GridMap" instance=ExtResource("7_rtbbl")]
-transform = Transform3D(-0.938974, 0, -0.343987, 0, 1, 0, 0.343987, 0, -0.938974, 13.1124, 0.499998, 9.65242)
-
-[node name="Pallet_Small_Decorated_B2" parent="GridMap" instance=ExtResource("8_4uqpq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.83132, 0.500002, -13.4174)
-
-[node name="Pallet_Small_Decorated_A2" parent="GridMap" instance=ExtResource("9_wmggd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10941, 0.5, -13.592)
-
-[node name="table_medium_Decorated2" parent="GridMap" instance=ExtResource("10_vv3bb")]
-transform = Transform3D(0.941741, 0, -0.336339, 0, 1, 0, 0.336339, 0, 0.941741, 7.90885, 0.500002, -11.5121)
-
-[node name="Weaponrack_Decorated" parent="GridMap" instance=ExtResource("11_cqimg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89139, 0.5, -15.236)
-
-[node name="Workbench" parent="GridMap" instance=ExtResource("12_xqy8m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4623, 0.5, 7.71874)
-
-[node name="Workbench_Decorated" parent="GridMap" instance=ExtResource("13_7q4lj")]
-transform = Transform3D(-0.162121, 0, -0.986771, 0, 1, 0, 0.986771, 0, -0.162121, 13.7048, 0.5, 5.01438)
-
-[node name="Dummy_Base2" parent="GridMap" instance=ExtResource("14_t5pn0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4323, 0.499998, -14.3371)
-
-[node name="Locker_Decorated3" parent="GridMap" instance=ExtResource("7_rtbbl")]
-transform = Transform3D(0.842828, 0, 0.538182, 0, 1, 0, -0.538182, 0, 0.842828, -14.2613, 0.5, -12.4936)
-
-[node name="Pallet_Small_Decorated_A3" parent="GridMap" instance=ExtResource("9_wmggd")]
-transform = Transform3D(0.995316, 0, -0.0966796, 0, 1, 0, 0.0966796, 0, 0.995316, -12.1469, 0.5, -14.2773)
-
-[node name="Pallet_Small_Decorated_B3" parent="GridMap" instance=ExtResource("8_4uqpq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9626, 0.5, -9.63996)
-
-[node name="table_medium_Decorated3" parent="GridMap" instance=ExtResource("10_vv3bb")]
-transform = Transform3D(0.916447, 0, -0.400157, 0, 1, 0, 0.400157, 0, 0.916447, -13.1075, 0.770306, 1.36718)
-
-[node name="Workbench_Decorated2" parent="GridMap" instance=ExtResource("13_7q4lj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1687, 0.5, -0.875494)
-
-[node name="Weaponrack_Decorated2" parent="GridMap" instance=ExtResource("11_cqimg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19064, 0.5, -15.2207)
-
-[node name="Door_B2" parent="GridMap" instance=ExtResource("15_x5wki")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.8737, 0.500001, -5.10412)
-
-[node name="Locker_Decorated4" parent="GridMap" instance=ExtResource("7_rtbbl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42534, 0.500002, -14.29)
-
-[node name="Cube_Prototype_Large_B_003" parent="GridMap/Locker_Decorated4/Locker_Decorated" index="0"]
-visible = false
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("14_wua4r")
 
-[node name="crabtopus_boss" parent="." node_paths=PackedStringArray("looking_target") instance=ExtResource("15_aeik3")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1.25865)
-looking_target = NodePath("../PlayerEntity")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="crabtopus_boss"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -6.21202, 5.90494, -0.307908)
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -12.424, 11.8099, 0.642834)
 light_color = Color(1, 0.5, 0.5, 1)
 light_energy = 16.0
 omni_range = 24.0
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="crabtopus_boss"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 10.0473, 0.571665, -19.901)
-light_color = Color(0.44937, 0.361798, 0.948052, 1)
+[node name="OmniLight3D2" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 10.127, 8.10384, -8.595)
+light_color = Color(0.271437, 0.571825, 0.778335, 1)
 light_energy = 16.0
-omni_range = 33.732
+omni_range = 13.0888
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="crabtopus_boss"]
-transform = Transform3D(-1, 1.21967e-07, -8.90151e-08, 0, 0.589521, 0.807753, 1.50996e-07, 0.807753, -0.589521, -5.96788, 6, -0.293223)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-1, 1.21967e-07, -8.90153e-08, 0, 0.589521, 0.807753, 1.50996e-07, 0.807753, -0.589521, -11.9358, 12, 0.672204)
 light_color = Color(0.869293, 0.815387, 0.968418, 1)
 light_energy = 0.342
 
-[editable path="GridMap/Locker_Decorated4"]
+[node name="GridMap2" type="GridMap" parent="."]
+mesh_library = ExtResource("4_feg2f")
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65529, 65528, 1441832, 65529, 65529, 1441832, 65528, 65527, 1441803, 65528, 65529, 1441803, 65528, 65525, 1441803, 65528, 65523, 1048591, 65528, 65521, 1441803, 65528, 65519, 1441803, 65528, 65517, 1441803, 65529, 65527, 1441832, 65529, 65525, 1441832, 65529, 65523, 1441832, 65529, 65521, 655407, 65529, 65517, 1441832, 65528, 65531, 1441803, 65528, 65533, 1441803, 65528, 65535, 1441803, 65528, 1, 1441803, 65528, 3, 1441803, 65529, 65531, 1441832, 65529, 65533, 1441832, 65529, 65535, 655407, 65529, 1, 1441832, 65529, 3, 1441832, 65529, 5, 34, 65531, 6, 11, 65533, 6, 11, 65535, 6, 11, 1, 6, 11, 3, 6, 11, 65531, 5, 40, 65533, 5, 1048616, 65535, 5, 40, 1, 5, 655407, 3, 5, 40, 9, 65523, 1441832, 9, 65525, 1441832, 10, 65517, 1441803, 10, 65519, 1441803, 10, 65521, 1441803, 10, 65523, 1441803, 10, 65527, 1441803, 10, 65529, 1441803, 10, 65531, 1441803, 10, 65533, 1441803, 10, 65535, 1441803, 10, 1, 1441803, 11, 65535, 655414, 7, 65521, 655407, 1, 65527, 655407, 1, 65529, 655407, 7, 65535, 1441832, 1, 65535, 655399, 11, 65519, 655414, 11, 7, 655414, 1, 7, 655414, 65527, 7, 655414, 65527, 65535, 655414, 65527, 65527, 655414, 10, 65525, 1441803, 11, 65527, 655414, 65529, 65519, 1441832, 65527, 65519, 655414, 65531, 65517, 1441832, 65531, 65519, 1441832, 65531, 65521, 1441832, 65531, 65523, 1441832, 65531, 65525, 1441832, 65533, 65517, 1048616, 65533, 65519, 1441832, 65535, 65517, 1441832, 65535, 65519, 1441832, 3, 65517, 1441832, 3, 65519, 1441832, 5, 65517, 1441832, 5, 65519, 1441832, 7, 65517, 1048616, 7, 65519, 1441832, 9, 65517, 1441832, 9, 65519, 1441832, 65533, 65521, 1441832, 65533, 65523, 1441832, 65533, 65525, 1441832, 65535, 65521, 1441832, 65535, 65523, 1048616, 65535, 65525, 1441832, 3, 65521, 1441832, 3, 65523, 1441832, 3, 65525, 1441832, 5, 65521, 1441832, 5, 65523, 1441832, 5, 65525, 1441832, 65531, 65527, 1441832, 65531, 65529, 1441832, 65531, 65531, 1441832, 65533, 65527, 1441832, 65533, 65529, 1441832, 65533, 65531, 1441832, 3, 65527, 1441832, 3, 65529, 1441832, 3, 65531, 1441832, 5, 65527, 1441832, 5, 65529, 1441832, 5, 65531, 1441832, 65535, 65527, 1441832, 65535, 65529, 1441832, 65535, 65531, 1441832, 7, 65527, 1441832, 7, 65529, 1441832, 7, 65531, 1048616, 9, 65527, 1441832, 9, 65529, 1441832, 9, 65531, 1441832, 7, 65523, 1441832, 7, 65525, 1441832, 65533, 65533, 1441832, 65533, 65535, 1441832, 65533, 1, 1048616, 65535, 65533, 1441832, 65535, 65535, 1441832, 65535, 1, 1441832, 65531, 65533, 1441832, 65531, 65535, 1441832, 65531, 1, 1441832, 65531, 3, 1441832, 65533, 3, 1441832, 65535, 3, 1441832, 3, 65533, 1441832, 3, 65535, 1441832, 3, 1, 1441832, 5, 65533, 1441832, 5, 65535, 1048616, 5, 1, 1048616, 3, 3, 1441832, 9, 65535, 1441832, 9, 1, 1441832, 7, 65533, 1441832, 9, 65533, 1441832, 1, 65517, 655400, 0, 65519, 655400, 1, 65519, 655400, 5, 65524, 655400, 65531, 65524, 655400, 7, 65528, 655400, 65531, 65528, 1048616, 65531, 2, 1048616, 7, 1, 1441832, 8, 1, 1441832, 1, 3, 1048616, 1, 1, 1048616, 1, 65533, 1048616, 1, 65531, 1048616, 1, 65525, 1048616, 1, 65523, 1048616, 9, 65521, 1048616, 1, 65521, 1048615, 65528, 65515, 1441803, 65529, 65515, 1441832, 65531, 65515, 1441832, 65533, 65515, 1441832, 65535, 65515, 1441832, 1, 65515, 655407, 3, 65515, 1441832, 5, 65515, 1441832, 7, 65515, 1441832, 9, 65515, 1441832, 10, 65515, 1441803, 1, 65511, 54, 10, 65511, 1441803, 65528, 65513, 1441803, 65529, 65513, 1441832, 65531, 65513, 1441832, 65533, 65513, 1441832, 65535, 65513, 1441832, 1, 65513, 655407, 3, 65513, 1441832, 5, 65513, 1441832, 7, 65513, 1441832, 9, 65513, 1441832, 10, 65513, 1441803, 5, 6, 11, 7, 6, 11, 10, 3, 1441803, 5, 3, 1048616, 5, 5, 40, 6, 5, 1441832, 7, 3, 1048616, 8, 3, 1441832, 8, 5, 1441803, 9, 3, 1441832, 65529, 7, 34, 65531, 7, 34, 65533, 7, 34, 65535, 7, 34, 3, 7, 34, 7, 7, 34, 65527, 1, 34, 11, 3, 34, 65527, 65531, 34, 11, 65531, 34, 11, 65523, 34, 11, 65521, 34, 65527, 65517, 34, 65527, 65513, 34, 11, 65513, 34, 65527, 65511, 655414, 65529, 65512, 655371, 65531, 65512, 655371, 65533, 65512, 655371, 65535, 65512, 655371, 1, 65512, 655371, 3, 65512, 655371, 5, 65512, 655371, 7, 65512, 11, 9, 65512, 655371, 11, 65511, 54, 65527, 65515, 33, 11, 65515, 33, 11, 65517, 33, 9, 65511, 33, 3, 65511, 33, 65531, 65511, 33, 65533, 65511, 33, 65527, 65521, 33, 65527, 65523, 33, 65527, 65525, 33, 65527, 65529, 33, 65527, 65533, 33, 65527, 3, 33, 5, 7, 33, 9, 7, 33, 11, 5, 33, 11, 1, 33, 11, 65533, 33, 11, 65529, 33, 11, 65525, 33, 7, 65511, 33, 5, 65511, 33, 65535, 65511, 33, 65529, 65511, 33, 196599, 65535, 57, 196599, 65527, 57, 131083, 65527, 57, 131083, 65535, 57, 131083, 65519, 57, 131083, 65511, 57, 131073, 65511, 57, 196599, 65511, 57, 196599, 65519, 57, 196599, 7, 57, 131073, 7, 57, 131083, 7, 57, 9, 5, 34, 65527, 5, 34, 65530, 4, 88, 8, 4, 655448, 9, 4, 655375, 65530, 5, 1048587, 65529, 4, 11, 0, 65521, 1441803, 2, 65521, 1441803, 1, 65522, 655371)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="Locker_Decorated2" parent="GridMap2" instance=ExtResource("7_rtbbl")]
+transform = Transform3D(-0.938974, 0, -0.343987, 0, 1, 0, 0.343987, 0, -0.938974, 13.1124, 0.499998, 9.65242)
+
+[node name="Pallet_Small_Decorated_B2" parent="GridMap2" instance=ExtResource("8_4uqpq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.83132, 0.500002, -13.4174)
+
+[node name="Pallet_Small_Decorated_A2" parent="GridMap2" instance=ExtResource("9_wmggd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10941, 0.5, -13.592)
+
+[node name="table_medium_Decorated2" parent="GridMap2" instance=ExtResource("10_vv3bb")]
+transform = Transform3D(0.941741, 0, -0.336339, 0, 1, 0, 0.336339, 0, 0.941741, 7.90885, 0.500002, -11.5121)
+
+[node name="Weaponrack_Decorated" parent="GridMap2" instance=ExtResource("11_cqimg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89139, 0.5, -15.236)
+
+[node name="Workbench" parent="GridMap2" instance=ExtResource("12_xqy8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4623, 0.5, 7.71874)
+
+[node name="Workbench_Decorated" parent="GridMap2" instance=ExtResource("13_7q4lj")]
+transform = Transform3D(-0.162121, 0, -0.986771, 0, 1, 0, 0.986771, 0, -0.162121, 13.7048, 0.5, 5.01438)
+
+[node name="Dummy_Base2" parent="GridMap2" instance=ExtResource("14_t5pn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4323, 0.499998, -14.3371)
+
+[node name="Locker_Decorated3" parent="GridMap2" instance=ExtResource("7_rtbbl")]
+transform = Transform3D(0.842828, 0, 0.538182, 0, 1, 0, -0.538182, 0, 0.842828, -14.2613, 0.5, -12.4936)
+
+[node name="Pallet_Small_Decorated_A3" parent="GridMap2" instance=ExtResource("9_wmggd")]
+transform = Transform3D(0.995316, 0, -0.0966796, 0, 1, 0, 0.0966796, 0, 0.995316, -12.1469, 0.5, -14.2773)
+
+[node name="Pallet_Small_Decorated_B3" parent="GridMap2" instance=ExtResource("8_4uqpq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9626, 0.5, -9.63996)
+
+[node name="table_medium_Decorated3" parent="GridMap2" instance=ExtResource("10_vv3bb")]
+transform = Transform3D(0.916447, 0, -0.400157, 0, 1, 0, 0.400157, 0, 0.916447, -13.1075, 0.770306, 1.36718)
+
+[node name="Workbench_Decorated2" parent="GridMap2" instance=ExtResource("13_7q4lj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1687, 0.5, -0.875494)
+
+[node name="Weaponrack_Decorated2" parent="GridMap2" instance=ExtResource("11_cqimg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.19064, 0.5, -15.2207)
+
+[node name="Door_B2" parent="GridMap2" instance=ExtResource("15_x5wki")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.8737, 0.500001, -5.10412)
+
+[node name="Locker_Decorated4" parent="GridMap2" instance=ExtResource("7_rtbbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42534, 0.500002, -14.29)
+
+[node name="Cube_Prototype_Large_B_003" parent="GridMap2/Locker_Decorated4/Locker_Decorated" index="0"]
+visible = false
+
+[node name="Locker2" parent="GridMap2" instance=ExtResource("17_efgx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.51965, 0.53, -40.4519)
+
+[node name="Locker3" parent="GridMap2" instance=ExtResource("17_efgx7")]
+transform = Transform3D(0.899794, 0, -0.436315, 0, 1, 0, 0.436315, 0, 0.899794, 4.59, 0.53, -42.0297)
+
+[node name="Locker_Decorated5" parent="GridMap2" instance=ExtResource("7_rtbbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68061, 0.53, -38.4066)
+
+[node name="Pallet_Small_Decorated_B4" parent="GridMap2" instance=ExtResource("8_4uqpq")]
+transform = Transform3D(0.718418, 0, -0.695612, 0, 1, 0, 0.695612, 0, 0.718418, -6.45465, 0.53, -36.8872)
+
+[node name="Pallet_Small_Decorated_A4" parent="GridMap2" instance=ExtResource("9_wmggd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34312, 0.53, -35.1341)
+
+[node name="Pallet_Small_Decorated_A5" parent="GridMap2" instance=ExtResource("9_wmggd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0247, 0.53, -34.9588)
+
+[node name="Pallet_Small_Decorated_B5" parent="GridMap2" instance=ExtResource("8_4uqpq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -34)
+
+[node name="Locker" parent="GridMap2" instance=ExtResource("17_efgx7")]
+transform = Transform3D(-0.66497, 0, 0.74687, 0, 1, 0, -0.74687, 0, -0.66497, -8.54422, 0.500001, -8.63237)
+
+[editable path="GridMap2/Locker_Decorated4"]

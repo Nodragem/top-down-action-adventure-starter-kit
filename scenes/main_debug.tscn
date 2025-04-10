@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://btgw7dpwnjnyy"]
 
-[ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_ynaki"]
+[ext_resource type="Script" uid="uid://b1xrinwfnjecq" path="res://scenes/game_manager.gd" id="1_ynaki"]
 [ext_resource type="PackedScene" uid="uid://jga6pbb5xpug" path="res://characters/player/PlayerEntity.tscn" id="2_3c7yt"]
 [ext_resource type="PackedScene" uid="uid://bsvdg3ojnd0oj" path="res://ui/ControllerMenu.tscn" id="3_6gnp1"]
 [ext_resource type="PackedScene" uid="uid://bd5lrudlpxbay" path="res://ui/GameOverMenu.tscn" id="4_iidia"]

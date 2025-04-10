@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b6w6w3c51x1q8"]
 
-[ext_resource type="Shader" path="res://assets/objects/laboratory/glass_shader.gdshader" id="1_oclsa"]
+[ext_resource type="Shader" uid="uid://b86pkbsmw6acl" path="res://assets/objects/laboratory/glass_shader.gdshader" id="1_oclsa"]
 
 [resource]
 render_priority = 0

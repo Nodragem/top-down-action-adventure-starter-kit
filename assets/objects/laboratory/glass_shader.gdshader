@@ -26,20 +26,20 @@ void fragment() {
 	// calculate fresnel values
 	float VdotN = dot(VIEW, NORMAL);
 	float fresnel = clamp(SchlickFresnel(VdotN), 0.0, 1.0);
-	
+
 	// sample and mix textures
 	vec4 _albedo = texture(albedo_texture, UV) * albedo;
 	float _roughness = texture(roughness_texture, UV).r * roughness;
-	
+
 	// apply glass look
 	float a = mix(0.001, 1.0, _albedo.a);
 	ALPHA = mix(fresnel * edge_color.a, 1.0, a);
 	ALBEDO = mix(edge_color.rgb * edge_color.a, _albedo.rgb, a);
-	
+
 	ROUGHNESS = _roughness;
 	NORMAL_MAP = texture(normal_map, UV).xyz;
 	NORMAL_MAP_DEPTH = normal_strength;
-	
+
 	// function to compensate specular for alpha blend
 	// 0.5 * ALPHA^-0.5
 	SPECULAR = 0.99 * inversesqrt(ALPHA);

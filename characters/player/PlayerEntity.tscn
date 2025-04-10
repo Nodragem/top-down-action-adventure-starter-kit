@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://jga6pbb5xpug"]
 
 [ext_resource type="PackedScene" uid="uid://ds848t2x4cxyt" path="res://characters/player/CharacterSkins/IcySkin_inherited.tscn" id="1"]
-[ext_resource type="Script" path="res://characters/player/PlayerEntity.gd" id="2"]
-[ext_resource type="Resource" uid="uid://brqs06utnplwd" path="res://ui/game_data_store.tres" id="2_gbwfc"]
+[ext_resource type="Script" uid="uid://dvdve1m8d1a55" path="res://characters/player/PlayerEntity.gd" id="2"]
+[ext_resource type="Resource" uid="uid://sbtjvh0u1rpt" path="res://ui/game_data_store.tres" id="2_gbwfc"]
 [ext_resource type="PackedScene" uid="uid://d3yswfl2m7nue" path="res://characters/player/CharacterControllers/OneStickController.tscn" id="2_njm8p"]
 [ext_resource type="PackedScene" uid="uid://d1rmoxdu5yefv" path="res://characters/player/CharacterControllers/TwoStickController.tscn" id="3_k2os6"]
 [ext_resource type="PackedScene" uid="uid://drvgaalhd5v8s" path="res://characters/player/CharacterControllers/TwoStickControllerAuto.tscn" id="5_n2q7r"]
 [ext_resource type="PackedScene" uid="uid://bwf5frggyeobl" path="res://characters/player/CharacterControllers/KeyboardMouseController.tscn" id="5_rys30"]
 [ext_resource type="PackedScene" uid="uid://c5l20701ck6co" path="res://characters/player/health_manager.tscn" id="6_7wv34"]
-[ext_resource type="Script" path="res://characters/PositionResetter.gd" id="14"]
+[ext_resource type="Script" uid="uid://r1dxcp1n2377" path="res://characters/PositionResetter.gd" id="14"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.492627

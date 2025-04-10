@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ch2jr3q2y41us"]
 
-[ext_resource type="Script" path="res://assets/objects/weapons/toy_gun/Arrow.gd" id="1"]
+[ext_resource type="Script" uid="uid://mjus6t8d1iwx" path="res://assets/objects/weapons/toy_gun/Arrow.gd" id="1"]
 [ext_resource type="Material" path="res://assets/objects/weapons/toy_gun/Arrow.material" id="2"]
 [ext_resource type="Material" uid="uid://8x5le7e5jdm1" path="res://assets/objects/weapons/toy_gun/impact-material.tres" id="3_bs5t2"]
 
