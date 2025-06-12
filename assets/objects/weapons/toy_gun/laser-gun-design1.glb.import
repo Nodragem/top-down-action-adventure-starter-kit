@@ -39,9 +39,8 @@ _subresources={
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
-"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://assets/objects/weapons/toy_gun/laser-gun-design1_Cube.res"
+"save_to_file/path": "uid://3xje3o37tqww"
 }
 }
 }

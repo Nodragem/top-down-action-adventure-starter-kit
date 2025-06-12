@@ -35,9 +35,9 @@
 [ext_resource type="PackedScene" uid="uid://h8pnjgggsrtm" path="res://characters/NPC/dr_megadroon.tscn" id="32_ktg0t"]
 [ext_resource type="PackedScene" uid="uid://ghvokiyi5vxr" path="res://assets/objects/laboratory/item_distributor.tscn" id="32_xsrdy"]
 [ext_resource type="PackedScene" uid="uid://cwk6ldidjdnnh" path="res://assets/objects/laboratory/cloning_tank.tscn" id="33_a67mj"]
-[ext_resource type="ArrayMesh" uid="uid://bs6c8eaebtib1" path="res://assets/objects/weapons/toy_gun/laser-gun-design1_Cube.res" id="33_erj25"]
 [ext_resource type="Resource" uid="uid://bh0w2xg3k5a7g" path="res://scenes/level1/level1_drmegadroon.dtl" id="34_507xk"]
 [ext_resource type="PackedScene" uid="uid://dhnoso0tnbnrd" path="res://assets/objects/laboratory/computer2.glb" id="34_ph7g1"]
+[ext_resource type="ArrayMesh" uid="uid://3xje3o37tqww" path="res://assets/objects/weapons/toy_gun/laser-gun-design1_Cube.tres" id="37_eufvb"]
 [ext_resource type="PackedScene" uid="uid://yqmkxyxy01sl" path="res://assets/objects/laboratory/collectable_building_pass.tscn" id="39_85vp3"]
 [ext_resource type="PackedScene" uid="uid://bbsktoyjr6ylg" path="res://assets/objects/laboratory/dr_bed.glb" id="39_huhy3"]
 [ext_resource type="PackedScene" uid="uid://b2nlcgg1yuy7o" path="res://assets/objects/switches/door_switch.tscn" id="40_gvxam"]
@@ -1147,7 +1147,7 @@ metadata/_edit_lock_ = true
 
 [node name="ItemDistributor" parent="GridMapBuilding/InteractiveObjects" instance=ExtResource("32_xsrdy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4349, 7, 1.99275)
-item_mesh = ExtResource("33_erj25")
+item_mesh = ExtResource("37_eufvb")
 dialog_timeline = ExtResource("34_507xk")
 jump_to_label = "OnGunPickedUp"
 
