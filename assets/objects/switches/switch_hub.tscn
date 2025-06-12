@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dk1e5h13iicq3"]
 
-[ext_resource type="Script" path="res://assets/objects/switches/switch_hub.gd" id="1_cnbua"]
+[ext_resource type="Script" uid="uid://bc1sldljx0owt" path="res://assets/objects/switches/switch_hub.gd" id="1_cnbua"]
 
 [sub_resource type="GDScript" id="GDScript_vgdks"]
 script/source = "extends SwitchComponent

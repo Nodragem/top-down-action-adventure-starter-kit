@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://yqmkxyxy01sl"]
 
-[ext_resource type="Script" path="res://assets/objects/collectable.gd" id="1_66jli"]
+[ext_resource type="Script" uid="uid://dh3gt7xefdgi0" path="res://assets/objects/collectable.gd" id="1_66jli"]
 [ext_resource type="ArrayMesh" uid="uid://cpkc2anpya70j" path="res://assets/objects/laboratory/building_pass.res" id="2_qh84o"]
 [ext_resource type="PackedScene" uid="uid://cpxkladyjcj8d" path="res://ui/interaction_tip.tscn" id="3_y1vyt"]
 

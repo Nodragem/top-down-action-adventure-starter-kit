@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dry6bur0hcgqc"]
 
-[ext_resource type="Script" path="res://assets/objects/collectable.gd" id="1_jjs3m"]
+[ext_resource type="Script" uid="uid://dh3gt7xefdgi0" path="res://assets/objects/collectable.gd" id="1_jjs3m"]
 [ext_resource type="PackedScene" uid="uid://cq342c86wg6dj" path="res://ui/dialogue_opener.tscn" id="2_whrga"]
 
 [node name="Collectable" type="Node3D"]

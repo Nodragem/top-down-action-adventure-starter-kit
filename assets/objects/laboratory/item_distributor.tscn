@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ghvokiyi5vxr"]
 
 [ext_resource type="PackedScene" uid="uid://cv30qkphf2eqm" path="res://assets/objects/laboratory/item_distributor.glb" id="1_q0cfd"]
-[ext_resource type="Script" path="res://assets/objects/laboratory/item_distributor.gd" id="2_kpopi"]
+[ext_resource type="Script" uid="uid://bnq3yhwmdxl41" path="res://assets/objects/laboratory/item_distributor.gd" id="2_kpopi"]
 [ext_resource type="PackedScene" uid="uid://cq342c86wg6dj" path="res://ui/dialogue_opener.tscn" id="3_013oy"]
 
 [node name="ItemDistributor" instance=ExtResource("1_q0cfd")]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dk1e5h13iicq3" path="res://assets/objects/switches/switch_hub.tscn" id="3_qefay"]
 [ext_resource type="PackedScene" uid="uid://hcqc6rr7cqwf" path="res://assets/objects/switches/long_interaction_switch.tscn" id="3_vnpfb"]
 [ext_resource type="Environment" uid="uid://dtrxire26wyng" path="res://scenes/level1/level1_env.tres" id="4_57k20"]
-[ext_resource type="Script" path="res://assets/objects/switches/switch_connection.gd" id="4_x0kdb"]
+[ext_resource type="Script" uid="uid://buhswj85cbtl6" path="res://assets/objects/switches/switch_connection.gd" id="4_x0kdb"]
 [ext_resource type="PackedScene" uid="uid://b2nlcgg1yuy7o" path="res://assets/objects/switches/door_switch.tscn" id="5_0i26q"]
 [ext_resource type="PackedScene" uid="uid://ds5itulgl8xim" path="res://assets/objects/switches/door_spawner.tscn" id="5_8padq"]
 [ext_resource type="PackedScene" uid="uid://dyssgs4g0elmf" path="res://characters/enemies/melee/minion/EnemyMinion.tscn" id="6_46hhq"]

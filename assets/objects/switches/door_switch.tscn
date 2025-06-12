@@ -231,9 +231,9 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p0j34"]
 _data = {
-"Closing": SubResource("Animation_470fy"),
-"Opening": SubResource("Animation_nq2hn"),
-"RESET": SubResource("Animation_o3pyg")
+&"Closing": SubResource("Animation_470fy"),
+&"Opening": SubResource("Animation_nq2hn"),
+&"RESET": SubResource("Animation_o3pyg")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sucim"]

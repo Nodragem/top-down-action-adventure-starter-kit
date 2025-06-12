@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5l20701ck6co"]
 
-[ext_resource type="Script" path="res://health_manager.gd" id="1_kkp7n"]
+[ext_resource type="Script" uid="uid://bbjo1jvxvmfn0" path="res://health_manager.gd" id="1_kkp7n"]
 [ext_resource type="FontFile" uid="uid://dgn5mdix5re20" path="res://ui/fonts/Montserrat-Bold.ttf" id="2_vjroa"]
 [ext_resource type="Texture2D" uid="uid://x8mapw2tro6o" path="res://assets/objects/heart_full.png" id="3_w3ty2"]
 [ext_resource type="Texture2D" uid="uid://8jihgu4bmhcd" path="res://assets/objects/heart_null.png" id="4_uvc5a"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=50 format=3 uid="uid://b87aieg3uitnk"]
 
 [ext_resource type="MeshLibrary" uid="uid://1r1ria7fpq17" path="res://assets/kits/meshlib_prototype_bits.tres" id="1_u13gm"]
-[ext_resource type="Script" path="res://scenes/level_manager.gd" id="1_xfajn"]
+[ext_resource type="Script" uid="uid://b0wrgbtnnxp0p" path="res://scenes/level_manager.gd" id="1_xfajn"]
 [ext_resource type="PackedScene" uid="uid://coruyu75lnbo2" path="res://assets/prototype_bits/Barrel_A.gltf" id="3_mmctn"]
 [ext_resource type="PackedScene" uid="uid://dneg7v0yca3cx" path="res://assets/prototype_bits/Locker_Decorated.gltf" id="3_oe01x"]
 [ext_resource type="PackedScene" uid="uid://ppgku2ydp6y4" path="res://assets/prototype_bits/Pallet_Small_Decorated_B.gltf" id="3_v87cw"]
@@ -36,7 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://ghvokiyi5vxr" path="res://assets/objects/laboratory/item_distributor.tscn" id="32_xsrdy"]
 [ext_resource type="PackedScene" uid="uid://cwk6ldidjdnnh" path="res://assets/objects/laboratory/cloning_tank.tscn" id="33_a67mj"]
 [ext_resource type="ArrayMesh" uid="uid://bs6c8eaebtib1" path="res://assets/objects/weapons/toy_gun/laser-gun-design1_Cube.res" id="33_erj25"]
-[ext_resource type="Resource" path="res://scenes/level1/level1_drmegadroon.dtl" id="34_507xk"]
+[ext_resource type="Resource" uid="uid://bh0w2xg3k5a7g" path="res://scenes/level1/level1_drmegadroon.dtl" id="34_507xk"]
 [ext_resource type="PackedScene" uid="uid://dhnoso0tnbnrd" path="res://assets/objects/laboratory/computer2.glb" id="34_ph7g1"]
 [ext_resource type="PackedScene" uid="uid://yqmkxyxy01sl" path="res://assets/objects/laboratory/collectable_building_pass.tscn" id="39_85vp3"]
 [ext_resource type="PackedScene" uid="uid://bbsktoyjr6ylg" path="res://assets/objects/laboratory/dr_bed.glb" id="39_huhy3"]
@@ -613,11 +613,11 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ad5fl"]
 _data = {
-"Opening": SubResource("Animation_e0tby"),
-"RESET": SubResource("Animation_te3is"),
-"Scene1_Introduction": SubResource("Animation_g4mdv"),
-"Scene2_Opening_Training": SubResource("Animation_cl1bq"),
-"Simple_Transition": SubResource("Animation_wuyuu")
+&"Opening": SubResource("Animation_e0tby"),
+&"RESET": SubResource("Animation_te3is"),
+&"Scene1_Introduction": SubResource("Animation_g4mdv"),
+&"Scene2_Opening_Training": SubResource("Animation_cl1bq"),
+&"Simple_Transition": SubResource("Animation_wuyuu")
 }
 
 [sub_resource type="GDScript" id="GDScript_oit5n"]
@@ -651,7 +651,7 @@ script = ExtResource("1_xfajn")
 
 [node name="CutSceneManager" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ad5fl")
+&"": SubResource("AnimationLibrary_ad5fl")
 }
 script = SubResource("GDScript_oit5n")
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://hcqc6rr7cqwf"]
 
 [ext_resource type="PackedScene" uid="uid://t3fk8ctejpoh" path="res://assets/objects/switches/LongSwitch.glb" id="1_8fd63"]
-[ext_resource type="Script" path="res://assets/objects/switches/long_interaction_switch.gd" id="2_qjjge"]
+[ext_resource type="Script" uid="uid://moauoim1ekn5" path="res://assets/objects/switches/long_interaction_switch.gd" id="2_qjjge"]
 [ext_resource type="PackedScene" uid="uid://cpxkladyjcj8d" path="res://ui/interaction_tip.tscn" id="3_76xue"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e2py6"]
@@ -145,9 +145,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oai5e"]
 _data = {
-"RESET": SubResource("Animation_lwkho"),
-"progression_bar": SubResource("Animation_uicdx"),
-"switch_charging": SubResource("Animation_728kc")
+&"RESET": SubResource("Animation_lwkho"),
+&"progression_bar": SubResource("Animation_uicdx"),
+&"switch_charging": SubResource("Animation_728kc")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pj7cx"]

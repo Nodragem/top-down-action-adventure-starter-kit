@@ -146,9 +146,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dbmr2"]
 _data = {
-"Closing": SubResource("Animation_mcon7"),
-"Opening": SubResource("Animation_vbax0"),
-"RESET": SubResource("Animation_omvse")
+&"Closing": SubResource("Animation_mcon7"),
+&"Opening": SubResource("Animation_vbax0"),
+&"RESET": SubResource("Animation_omvse")
 }
 
 [sub_resource type="GDScript" id="GDScript_n5irn"]

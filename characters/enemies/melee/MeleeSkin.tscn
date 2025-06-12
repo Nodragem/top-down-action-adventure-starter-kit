@@ -4,7 +4,6 @@
 [ext_resource type="ArrayMesh" uid="uid://chs03lfaocohd" path="res://assets/objects/explosion/explosion_bits_B.res" id="1_jjy1h"]
 [ext_resource type="PackedScene" uid="uid://duds002tisele" path="res://characters/enemies/melee/minion/small_ennemy_animated.glb" id="2_ydhsr"]
 
-
 [sub_resource type="Curve" id="Curve_hhmyj"]
 _data = [Vector2(0, 1), 0.0, -0.209878, 0, 0, Vector2(1, 0), -3.09458, 0.0, 0, 0]
 point_count = 2

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b7qjf0oe1eegu" path="res://characters/NPC/dr-megadroon-PROTOTYPE.glb" id="1_x5o77"]
 [ext_resource type="PackedScene" uid="uid://cq342c86wg6dj" path="res://ui/dialogue_opener.tscn" id="2_mjkfd"]
-[ext_resource type="Resource" path="res://scenes/level1/level1_drmegadroon.dtl" id="3_nrowa"]
+[ext_resource type="Resource" uid="uid://bh0w2xg3k5a7g" path="res://scenes/level1/level1_drmegadroon.dtl" id="3_nrowa"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ghvd1"]
 radius = 0.647082

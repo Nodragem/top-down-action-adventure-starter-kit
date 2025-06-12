@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cq342c86wg6dj"]
 
-[ext_resource type="Script" path="res://assets/objects/switches/switch_dialogue.gd" id="1_fl3hb"]
+[ext_resource type="Script" uid="uid://vvxukcwfjku4" path="res://assets/objects/switches/switch_dialogue.gd" id="1_fl3hb"]
 [ext_resource type="PackedScene" uid="uid://cpxkladyjcj8d" path="res://ui/interaction_tip.tscn" id="2_df0j8"]
 
 [sub_resource type="GDScript" id="GDScript_enfp8"]

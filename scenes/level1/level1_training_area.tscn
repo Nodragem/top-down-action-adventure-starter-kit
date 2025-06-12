@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://1r1ria7fpq17" path="res://assets/kits/meshlib_prototype_bits.tres" id="1_facyi"]
 [ext_resource type="PackedScene" uid="uid://dk1e5h13iicq3" path="res://assets/objects/switches/switch_hub.tscn" id="2_faork"]
-[ext_resource type="Script" path="res://assets/objects/switches/switch_connection.gd" id="3_dx2yw"]
+[ext_resource type="Script" uid="uid://buhswj85cbtl6" path="res://assets/objects/switches/switch_connection.gd" id="3_dx2yw"]
 [ext_resource type="PackedScene" uid="uid://ttqp6dhghvut" path="res://assets/objects/switches/oneoff_area_switch.tscn" id="4_61lg1"]
 [ext_resource type="PackedScene" uid="uid://b2nlcgg1yuy7o" path="res://assets/objects/switches/door_switch.tscn" id="5_jgbxd"]
 [ext_resource type="PackedScene" uid="uid://bgbyxysfhnde2" path="res://assets/objects/switches/short_interaction_switch.tscn" id="6_7wpyl"]
@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://cvasin4b5w0ll" path="res://assets/prototype_bits/Door_B.gltf" id="31_2i6fa"]
 [ext_resource type="PackedScene" uid="uid://ghvokiyi5vxr" path="res://assets/objects/laboratory/item_distributor.tscn" id="32_r2fax"]
 [ext_resource type="BoxMesh" uid="uid://jmldsyopndwf" path="res://assets/objects/end_gem.tres" id="33_15a37"]
-[ext_resource type="Resource" path="res://scenes/level1/level1_drmegadroon.dtl" id="34_koovr"]
+[ext_resource type="Resource" uid="uid://bh0w2xg3k5a7g" path="res://scenes/level1/level1_drmegadroon.dtl" id="34_koovr"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2ocdk"]
 vertices = PackedVector3Array(-15, 1, -15, -15, 1, 19, 19, 1, 19, 19, 1, -15)

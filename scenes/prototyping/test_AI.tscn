@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cjklvg8pt4duv"]
 
 [ext_resource type="PackedScene" uid="uid://jga6pbb5xpug" path="res://characters/player/PlayerEntity.tscn" id="1_6jodu"]
-[ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_txk74"]
+[ext_resource type="Script" uid="uid://b1xrinwfnjecq" path="res://scenes/game_manager.gd" id="1_txk74"]
 [ext_resource type="PackedScene" uid="uid://bd5lrudlpxbay" path="res://ui/GameOverMenu.tscn" id="2_kmmi5"]
 [ext_resource type="MeshLibrary" uid="uid://1r1ria7fpq17" path="res://assets/kits/meshlib_prototype_bits.tres" id="2_rxava"]
 [ext_resource type="Environment" uid="uid://dtrxire26wyng" path="res://scenes/level1/level1_env.tres" id="3_yd4xj"]

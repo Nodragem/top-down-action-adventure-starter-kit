@@ -3,7 +3,6 @@
 [ext_resource type="ArrayMesh" uid="uid://chs03lfaocohd" path="res://assets/objects/explosion/explosion_bits_B.res" id="1_3fynh"]
 [ext_resource type="Material" uid="uid://yy4wl7opy4lu" path="res://assets/objects/explosion/SmokeExplosion.material" id="1_osmxc"]
 
-
 [sub_resource type="Gradient" id="Gradient_y2pog"]
 offsets = PackedFloat32Array(0, 0.466667, 1)
 colors = PackedColorArray(1, 0.77664, 0.532883, 1, 1, 0.452615, 0.250092, 1, 0.418536, 0.258217, 0.203763, 1)
@@ -12,7 +11,7 @@ colors = PackedColorArray(1, 0.77664, 0.532883, 1, 1, 0.452615, 0.250092, 1, 0.4
 gradient = SubResource("Gradient_y2pog")
 
 [sub_resource type="Curve" id="Curve_7e6yw"]
-min_value = -1.0
+_limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, -0.681522), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -72,8 +71,7 @@ point_count = 3
 curve = SubResource("Curve_ordqi")
 
 [sub_resource type="Curve" id="Curve_ab638"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 

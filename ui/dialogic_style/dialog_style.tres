@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DialogicStyle" load_steps=19 format=3 uid="uid://c8ske4nxflkqo"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_k0gjl"]
+[ext_resource type="Script" uid="uid://b2sodwcbh3sx7" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_k0gjl"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_igwej"]
 [ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_adu06"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_ahmcs"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3kbcomnf24ly" path="res://ui/dialogic_style/vn_choice_layer.tscn" id="7_r6gii"]
 [ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_nfwu8"]
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_llx3j"]
-[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_t4etc"]
+[ext_resource type="Script" uid="uid://duuu357wdxwtf" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_t4etc"]
 
 [sub_resource type="Resource" id="Resource_wp6dj"]
 script = ExtResource("1_k0gjl")

@@ -13,7 +13,7 @@ config_version=5
 config/name="Twin Shooter Starting Kit"
 config/tags=PackedStringArray("starterkit")
 run/main_scene="res://scenes/main.tscn"
-config/features=PackedStringArray("4.3")
+config/features=PackedStringArray("4.4")
 config/icon="res://project_icon.png"
 
 [autoload]
@@ -232,7 +232,7 @@ lights_and_shadows/directional_shadow/soft_shadow_filter_quality=5
 global_illumination/voxel_gi/quality=1
 environment/ssao/quality=4
 environment/ssil/quality=4
-global_illumination/sdfgi/probe_ray_count=3
 anti_aliasing/quality/msaa_3d=3
+global_illumination/sdfgi/probe_ray_count=3
 environment/defaults/default_environment="res://scenes/default_env.tres"
 vram_compression/import_etc=true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c200f30a2p8ul"]
 
-[ext_resource type="Script" path="res://tools/debugging/DebugStats.gd" id="1"]
+[ext_resource type="Script" uid="uid://67q45wu4hqyf" path="res://tools/debugging/DebugStats.gd" id="1"]
 [ext_resource type="FontFile" path="res://ui/fonts/roboto_mono_medium22.tres" id="2"]
 
 [node name="DebugStats" type="MarginContainer"]

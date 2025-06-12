@@ -1,7 +1,7 @@
 [gd_scene load_steps=33 format=4 uid="uid://ds848t2x4cxyt"]
 
 [ext_resource type="PackedScene" uid="uid://dh7bl5sry622j" path="res://characters/player/CharacterSkins/icy.glb" id="1_jnnas"]
-[ext_resource type="Script" path="res://characters/player/CharacterSkins/PlayerSkin.gd" id="2_ihbv3"]
+[ext_resource type="Script" uid="uid://bbm4tuo3yk7bj" path="res://characters/player/CharacterSkins/PlayerSkin.gd" id="2_ihbv3"]
 [ext_resource type="PackedScene" uid="uid://jvm2nax5dsg7" path="res://assets/objects/weapons/toy_gun/laser-gun-design1.glb" id="2_nu448"]
 [ext_resource type="Texture2D" uid="uid://c0lpx8edykpem" path="res://characters/player/CharacterSkins/icy_colors.png" id="3_8sjee"]
 [ext_resource type="Texture2D" uid="uid://dqq0avo77srm7" path="res://assets/objects/weapons/toy_gun/muzzle-effect.png" id="3_di4uy"]
@@ -263,7 +263,6 @@ bones/1/rotation = Quaternion(-0.0516466, 1.34274e-10, -1.00507e-08, 0.998665)
 bones/1/scale = Vector3(1.01439, 1.01439, 1.01439)
 bones/2/position = Vector3(-6.10683e-16, 0.538595, 4.38301e-09)
 bones/2/rotation = Quaternion(-0.029063, -1.19159e-07, -3.46458e-09, 0.999578)
-bones/2/scale = Vector3(1, 1, 1)
 bones/3/position = Vector3(0.409599, 0.247381, 0.0251057)
 bones/3/rotation = Quaternion(0.0480825, -0.0406241, -0.774513, 0.629419)
 bones/4/position = Vector3(-0.409599, 0.247381, 0.0251057)
@@ -290,7 +289,6 @@ bones/11/rotation = Quaternion(-0.0145809, 0.0854314, 0.97719, -0.193878)
 bones/11/scale = Vector3(0.999998, 1, 0.999999)
 bones/12/position = Vector3(7.92845e-08, 0.274804, 8.02172e-09)
 bones/12/rotation = Quaternion(-0.146594, -0.00141585, -0.107122, 0.983378)
-bones/12/scale = Vector3(1, 1, 1)
 bones/13/position = Vector3(-0.396213, 0.272741, 0.020303)
 bones/13/rotation = Quaternion(0.0149549, 0.08535, 0.976228, 0.198674)
 bones/13/scale = Vector3(0.999999, 1, 1)

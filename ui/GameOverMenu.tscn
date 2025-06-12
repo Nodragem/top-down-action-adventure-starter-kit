@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bd5lrudlpxbay"]
 
 [ext_resource type="FontFile" uid="uid://dgn5mdix5re20" path="res://ui/fonts/Montserrat-Bold.ttf" id="1_4agrd"]
-[ext_resource type="Script" path="res://ui/game_over_menu.gd" id="1_pcksl"]
+[ext_resource type="Script" uid="uid://dv0vb48j3ccoa" path="res://ui/game_over_menu.gd" id="1_pcksl"]
 [ext_resource type="StyleBox" uid="uid://onusb7ku18ti" path="res://ui/selected_style.tres" id="2_1x6aw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_icd7l"]

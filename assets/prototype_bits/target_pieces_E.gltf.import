@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bugsjohrxp3su"
-path="res://.godot/imported/target_pieces_E.gltf-1ae351f37a1d44c45ea128342c71238b.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/prototype_bits/target_pieces_E.gltf"
-dest_files=["res://.godot/imported/target_pieces_E.gltf-1ae351f37a1d44c45ea128342c71238b.scn"]
 
 [params]
 
@@ -18,6 +17,7 @@ nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -44,8 +44,5 @@ _subresources={
 }
 }
 }
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
 gltf/naming_version=1
 gltf/embedded_image_handling=1
