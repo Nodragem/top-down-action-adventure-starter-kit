@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bgbyxysfhnde2"]
 
 [ext_resource type="PackedScene" uid="uid://ds8uv8qautoda" path="res://assets/objects/switches/ShortSwitch.glb" id="1_m8y6f"]
-[ext_resource type="Script" path="res://assets/objects/switches/short_interaction_switch.gd" id="2_58nv6"]
+[ext_resource type="Script" uid="uid://b7io1q2e6swvc" path="res://assets/objects/switches/short_interaction_switch.gd" id="2_58nv6"]
 [ext_resource type="PackedScene" uid="uid://cpxkladyjcj8d" path="res://ui/interaction_tip.tscn" id="2_8032h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6x0yy"]
@@ -131,9 +131,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5ss8"]
 _data = {
-"RESET": SubResource("Animation_aycb1"),
-"off_state": SubResource("Animation_sucxi"),
-"on_state": SubResource("Animation_m4h6i")
+&"RESET": SubResource("Animation_aycb1"),
+&"off_state": SubResource("Animation_sucxi"),
+&"on_state": SubResource("Animation_m4h6i")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idddy"]
@@ -164,7 +164,7 @@ script = ExtResource("2_58nv6")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SwitchComponent" index="0"]
 root_node = NodePath("../..")
 libraries = {
-"": SubResource("AnimationLibrary_t5ss8")
+&"": SubResource("AnimationLibrary_t5ss8")
 }
 
 [node name="ClickHandle" parent="ShortSwitchBase" index="0"]

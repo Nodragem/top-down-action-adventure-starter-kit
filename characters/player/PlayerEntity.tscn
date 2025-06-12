@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ds848t2x4cxyt" path="res://characters/player/CharacterSkins/IcySkin_inherited.tscn" id="1"]
 [ext_resource type="Script" uid="uid://dvdve1m8d1a55" path="res://characters/player/PlayerEntity.gd" id="2"]
-[ext_resource type="Resource" uid="uid://sbtjvh0u1rpt" path="res://ui/game_data_store.tres" id="2_gbwfc"]
+[ext_resource type="Resource" uid="uid://dcltgvev2olwk" path="res://ui/game_data_store.tres" id="2_gbwfc"]
 [ext_resource type="PackedScene" uid="uid://d3yswfl2m7nue" path="res://characters/player/CharacterControllers/OneStickController.tscn" id="2_njm8p"]
 [ext_resource type="PackedScene" uid="uid://d1rmoxdu5yefv" path="res://characters/player/CharacterControllers/TwoStickController.tscn" id="3_k2os6"]
 [ext_resource type="PackedScene" uid="uid://drvgaalhd5v8s" path="res://characters/player/CharacterControllers/TwoStickControllerAuto.tscn" id="5_n2q7r"]

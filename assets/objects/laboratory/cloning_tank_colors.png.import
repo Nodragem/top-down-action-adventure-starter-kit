@@ -2,21 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnhklunmixii"
-path.s3tc="res://.godot/imported/prototypebits_texture.png-a02469b843af89a8472405ac4d31606b.s3tc.ctex"
+uid="uid://csqlprsw4c71q"
+path="res://.godot/imported/cloning_tank_colors.png-d803577e5a4be2a249dcc88194392e08.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
+}
+generator_parameters={
+"md5": "e8d6b3e858293de81da65a0e95d893f0"
 }
 
 [deps]
 
-source_file="res://assets/prototype_bits/prototypebits_texture.png"
-dest_files=["res://.godot/imported/prototypebits_texture.png-a02469b843af89a8472405ac4d31606b.s3tc.ctex"]
+source_file="res://assets/objects/laboratory/cloning_tank_colors.png"
+dest_files=["res://.godot/imported/cloning_tank_colors.png-d803577e5a4be2a249dcc88194392e08.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -32,4 +34,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
