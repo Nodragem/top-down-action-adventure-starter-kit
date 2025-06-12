@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://yqmkxyxy01sl"]
 
 [ext_resource type="Script" uid="uid://dh3gt7xefdgi0" path="res://assets/objects/collectable.gd" id="1_66jli"]
-[ext_resource type="ArrayMesh" uid="uid://cpkc2anpya70j" path="res://assets/objects/laboratory/building_pass.res" id="2_qh84o"]
+[ext_resource type="ArrayMesh" uid="uid://ccjtf8pu3j80m" path="res://assets/objects/laboratory/building_pass.tres" id="2_s0hfo"]
 [ext_resource type="PackedScene" uid="uid://cpxkladyjcj8d" path="res://ui/interaction_tip.tscn" id="3_y1vyt"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ptfp1"]
@@ -17,7 +17,7 @@ func on_interaction(requested):
 [node name="Collectable" type="Area3D"]
 collision_layer = 8
 script = ExtResource("1_66jli")
-item_mesh = ExtResource("2_qh84o")
+item_mesh = ExtResource("2_s0hfo")
 metadata/object = "building_card"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
